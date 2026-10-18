@@ -1,0 +1,705 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: "Mulish", system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    text-align: center;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+body {
+    background-color: #e8e9eb;
+}
+
+:root {
+    --azul-principal: #1c4d8d;
+    --azul-medio: #4988c4;
+    --azul-claro: #d9e6f2;
+    --azul-fundo-card: #e4eef7;
+    --azul-escuro-footer: #153966;
+    --texto-escuro: #252b42;
+    --texto-cinza: #555555;
+}
+
+
+header {
+    padding: 3vw 5vw;
+    border-bottom: 1px solid #cccccc;
+}
+
+header .logo-circle {
+    justify-self: start;
+    text-align: left;
+}
+
+
+header nav ul {
+    font-size: 1rem;
+    padding: 5px 0 5px 0;
+}
+
+header nav ul li a {
+    color: var(--texto-principal);
+    font-weight: 600;
+}
+
+header nav ul li a.ativo {
+    color: #4988C4;
+    font-weight: 800;
+}
+
+.sino img {
+    width: 10%;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Botão hambúrguer: só existe no celular */
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.sobre-nos {
+    width: 100%;
+    padding: 1.5rem 5%;
+}
+
+.introducao {
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.imagem-introducao {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.imagem-introducao img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.imagem-introducao::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(23, 67, 111, 0.20);
+}
+
+.imagem-introducao h1 {
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    left: 25px;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.missao {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.texto-missao {
+    width: 100%;
+}
+
+.texto-missao h2,
+.texto-nos h2 {
+    color: #252b42;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.texto-missao p,
+.texto-nos p {
+    color: #252b42;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.imagem-missao {
+    width: 100%;
+}
+
+.imagem-missao img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.nos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+section.nos div.equipe img{
+    width: 100%;
+    border-radius: 40px;
+
+}
+
+.texto-nos {
+    width: 100%;
+}
+
+.texto-nos p+p {
+    margin-top: 1.3rem;
+}
+
+.etapas {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.etapa {
+    width: 90%;
+    background-color: #1c4d8d;
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 2vw 0vw 0vw 4vw;
+    
+}
+
+.etapa p {
+    margin: 0;
+    font-family: "Mulish", sans-serif;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+ .cerebro-1 {
+        display: none;
+    }
+
+
+    /* CÉREBRO DE BAIXO */
+
+    .cerebro-2 {
+       display: none;
+    }
+
+
+.etapas::before,
+.etapas::after {
+    display: none;
+}
+
+
+.frase-final {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.frase-final h2 {
+    color: #252b42;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.frase-final strong {
+    font-weight: 800;
+}
+
+footer {
+  background-color: var(--azul-principal);
+  color: #ffffff;
+  padding: 2rem 5%;
+  margin-top: 3.5rem;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-container .logo-circle img {
+  width: 120px;
+  height: auto;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.footer-copy p {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.footer-redes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-redes img {
+  width: 24px;
+  height: 24px;
+}
+
+
+@media screen and (max-width: 599px) {
+
+    .menu-btn {
+        display: block;
+        transition: transform 0.2s ease;
+    }
+
+    .menu-btn:active {
+        transform: scale(0.9);
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    header .logo-circle {
+        justify-self: start;
+    }
+
+    header div.logo-circle img {
+        width: 35%;
+        border-radius: 50%;
+    }
+
+    header nav {
+        justify-self: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 80%;
+        max-width: 320px;
+        background: var(--azul-escuro-footer);
+        padding: 30px 24px;
+        z-index: 150;
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto;
+        box-shadow: -8px 0 24px rgba(0, 0, 0, 0.25);
+    }
+
+    header nav.aberto {
+        transform: translateX(0);
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        font-size: 1.05rem;
+        padding: 10px 0;
+    }
+
+    header nav ul li a {
+        display: block;
+        padding: 14px 4px;
+        color: #ffffff;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        transition: color 0.2s ease, padding-left 0.2s ease;
+    }
+
+    header nav ul li a:hover,
+    header nav ul li a:focus {
+        color: var(--azul-medio);
+        padding-left: 10px;
+    }
+
+    header nav ul li a.ativo {
+        color: var(--azul-medio);
+        font-weight: 800;
+    }
+
+    header nav .item-fechar a {
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        border-bottom: none;
+    }
+
+    header .header-icones {
+        justify-self: end;
+        text-align: end;
+    }
+
+    header .header-icones img {
+        border-radius: 50%;
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.4rem 5vw;
+        border-bottom: 1px solid #e3e3e3;
+    }
+
+    header nav .item-fechar {
+        display: none;
+    }
+
+    header div.logo-circle img {
+        width: 3.5rem;
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px var(--azul-claro);
+    }
+
+    header nav ul {
+        display: flex;
+        gap: 2.2vw;
+        font-size: 0.9rem;
+    }
+
+    header nav ul li a {
+        position: relative;
+        color: var(--texto-escuro);
+        font-weight: 500;
+        padding: 6px 2px;
+        transition: color 0.2s ease;
+    }
+
+    header nav ul li a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--azul-medio);
+        transition: width 0.25s ease;
+    }
+
+    header nav ul li a:hover {
+        color: var(--azul-medio);
+    }
+
+    header nav ul li a:hover::after {
+        width: 100%;
+    }
+
+    header nav ul li a.ativo {
+        color: #4988c4;
+        font-weight: 700;
+    }
+
+    header nav ul li a.ativo::after {
+        width: 100%;
+    }
+
+    .header-icones {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    .header-icones img {
+        width: 2.7rem;
+        height: 2.7rem;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 0 0 2px var(--azul-claro);
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .header-icones img:hover {
+        box-shadow: 0 0 0 2px var(--azul-medio);
+        transform: scale(1.05);
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .imagem-introducao {
+        height: 300px;
+    }
+
+    .imagem-introducao h1 {
+        font-size: 2.5rem;
+    }
+
+    .missao {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2.5rem;
+    }
+
+    .texto-missao {
+        width: 60%;
+    }
+
+    .texto-missao h2 {
+        font-size: 2rem;
+    }
+    .etapas h2 {
+        font-size: 1.5rem;
+    }
+.etapas {
+        position: relative;
+        width: 850px;
+        height: 800px;
+        margin: 0 auto;
+        padding: 0;
+        display: block;
+    }
+
+    .etapa {
+        position: absolute;
+        margin: 0;
+        padding: 22px;
+        box-sizing: border-box;
+    }
+
+    .etapa p {
+        font-size: 18px;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+
+    /* PRIMEIRA CAIXA */
+
+    .etapa-1 {
+        width: 193px;
+        height: 216px;
+
+        top: 40px;
+        left: 49px;
+    }
+
+
+    /* SEGUNDA CAIXA */
+
+    .etapa-2 {
+        width: 280px;
+        height: 200px;
+
+        top: 55px;
+        left: 549px;
+    }
+
+
+    /* TERCEIRA CAIXA */
+
+    .etapa-3 {
+        width: 336px;
+        height: 158px;
+
+        top: 350px;
+        left: 67px;
+    }
+
+   
+
+    /* QUARTA CAIXA */
+
+    .etapa-4 {
+        width: 174px;
+        height: 250px;
+
+        top: 486px;
+        left: 514px;
+    }
+
+
+    /* CÉREBRO DE CIMA */
+
+    .cerebro-1 {
+        display: block;
+        position: absolute;
+
+        width: 125px;
+
+        top: 225px;
+        left: 450px;
+    }
+
+
+    /* CÉREBRO DE BAIXO */
+
+    .cerebro-2 {
+        display: block;
+        position: absolute;
+
+        width: 140px;
+
+        top: 644px;
+        left: 168px;
+    }
+
+
+    /* LINHA DE CIMA */
+
+    .etapas::before {
+        content: "";
+
+        display: block;
+        position: absolute;
+
+        width: 308px;
+        height: 1px;
+
+        top: 119px;
+        left: 241px;
+
+        background-color: #777;
+    }
+
+
+    /* LINHA DE BAIXO */
+
+    .etapas::after {
+        content: "";
+
+        display: block;
+        position: absolute;
+
+        width: 300px;
+        height: 103px;
+
+        top: 255px;
+        left: 400px;
+
+        border-right: 1px solid #777;
+        border-bottom: 1px solid #777;
+
+        border-radius: 0px 0px 100px  ;
+    }
+   .linha3 {
+     content: "";
+
+        display: block;
+        position: absolute;
+
+        width: 300px;
+        height: 103px;
+
+        top: 510px;
+        left: 240px;
+
+        border-left: 1px solid #777;
+        border-bottom: 1px solid #777;
+
+        border-radius: 0px 100px ;
+   }
+    .imagem-missao {
+        width: 80%;
+    }
+
+    .nos {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2.5rem;
+    }
+
+    .equipe {
+        width: 48%;
+        gap: 10px;
+        border-radius: 50px;
+    }
+
+    .texto-nos {
+        width: 30%;
+    }
+
+    .texto-nos h2 {
+        font-size: 2rem;
+    }
+
+    .linha-etapas {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 0 6vw;
+
+    }
+
+    .frase-final {
+        margin-top: 4rem;
+    }
+
+    .frase-final h2 {
+        font-size: 1.8rem;
+    }
+
+     .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+  
+  .footer-redes img {
+    width: 20px;
+    height: 20px;
+  }
+}
